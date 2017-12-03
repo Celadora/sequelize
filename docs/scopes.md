@@ -98,6 +98,12 @@ Project.scope('random', { method: ['accessLevel', 19]}).findAll();
 SELECT * FROM projects WHERE someNumber = 42 AND accessLevel >= 19
 ```
 
+Default scope may be removed by invoking scope with no arguments before a model's method.
+
+```js
+Project.scope().findAll();
+```
+
 ## Merging
 Several scopes can be applied simultaneously by passing an array of scopes to `.scope`, or by passing the scopes as consecutive arguments.
 
